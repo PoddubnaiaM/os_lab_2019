@@ -60,7 +60,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>os_lab_2019/tcpclient.c at master · ShuvalovaVika/os_lab_2019</title>
+  <title>os_lab_2019/makefile at master · ShuvalovaVika/os_lab_2019</title>
     <meta name="description" content="The operating system practical course 2019. Contribute to ShuvalovaVika/os_lab_2019 development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -74,11 +74,11 @@
     
 
   <link rel="assets" href="https://github.githubassets.com/">
-    <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/71491672/ws?session=eyJ2IjoiVjMiLCJ1Ijo3MTQ5MTY3MiwicyI6Njk4ODIxMDg4LCJjIjo5OTU2MDg3MCwidCI6MTYyMjgzNTU1N30=--72de68b66a79d4908663013ef563f36c214e113bfc0cc5aa7e072ee723dab94c" data-refresh-url="/_alive" data-session-id="538beef690b84f3d8145de082c389a01f32611e1e7551f875f0e99392e0c52f6">
+    <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/71491672/ws?session=eyJ2IjoiVjMiLCJ1Ijo3MTQ5MTY3MiwicyI6Njk4ODIxMDg4LCJjIjoyMTYyNTY3MDc5LCJ0IjoxNjIyODM1NTQ0fQ==--fbc4fdbc89cfffa8caac611d34e5c51140f41365829840e9aa20b3aba41c2996" data-refresh-url="/_alive" data-session-id="538beef690b84f3d8145de082c389a01f32611e1e7551f875f0e99392e0c52f6">
     <link rel="shared-web-socket-src" href="/socket-worker-3f088aa2.js">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
 
-  <meta name="request-id" content="F822:63D8:3776B7:3A7396:60BA8158" data-pjax-transient="true" /><meta name="html-safe-nonce" content="9e88dc3a23c51ea8531d10f5a4001dfc5035d8c4db2aa814b2c38ae296343aab" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9TaHV2YWxvdmFWaWthL29zX2xhYl8yMDE5L3RyZWUvbWFzdGVyL2xhYjcvc3JjIiwicmVxdWVzdF9pZCI6IkY4MjI6NjNEODozNzc2Qjc6M0E3Mzk2OjYwQkE4MTU4IiwidmlzaXRvcl9pZCI6IjM4OTUwMjY4NDA3MzU1NzQ0OTEiLCJyZWdpb25fZWRnZSI6ImZyYSIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-pjax-transient="true" /><meta name="visitor-hmac" content="b01432d23dd26d41adf658a0f8ffca9b0c75d3d01ac0ee15e2fe2f7af70e5b59" data-pjax-transient="true" />
+  <meta name="request-id" content="F822:63D8:3771B6:3A6E3A:60BA8138" data-pjax-transient="true" /><meta name="html-safe-nonce" content="9e88dc3a23c51ea8531d10f5a4001dfc5035d8c4db2aa814b2c38ae296343aab" data-pjax-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9TaHV2YWxvdmFWaWthL29zX2xhYl8yMDE5L3RyZWUvbWFzdGVyL2xhYjcvc3JjIiwicmVxdWVzdF9pZCI6IkY4MjI6NjNEODozNzcxQjY6M0E2RTNBOjYwQkE4MTM4IiwidmlzaXRvcl9pZCI6IjM4OTUwMjY4NDA3MzU1NzQ0OTEiLCJyZWdpb25fZWRnZSI6ImZyYSIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-pjax-transient="true" /><meta name="visitor-hmac" content="2dc68234a13188d246e3d74384911114719926f32ffaf6c75367bf1bc7f08efa" data-pjax-transient="true" />
 
     <meta name="hovercard-subject-tag" content="repository:338772117" data-pjax-transient>
 
@@ -117,7 +117,7 @@
 
       <meta name="expected-hostname" content="github.com">
 
-      <meta name="js-proxy-site-detection-payload" content="YjQ2Yjk3MDZkOWNkZWNmOGY1MThmNThhM2VlNWM0MDQ0ZTdiNjYxOGE5MTViZmVhZjgzZmFkY2QxY2E3YWZkN3x7InJlbW90ZV9hZGRyZXNzIjoiOTMuMTg4LjQxLjY2IiwicmVxdWVzdF9pZCI6IkY4MjI6NjNEODozNzc2Qjc6M0E3Mzk2OjYwQkE4MTU4IiwidGltZXN0YW1wIjoxNjIyODM1NTU3LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+      <meta name="js-proxy-site-detection-payload" content="YjU4NDkyNDRmNDEwMmQ0OTdjODBlMmM4MTg5NWQyMGIzMWQyNTRhZGUxMjUzZTExNmMwYzNmNWNjMWE2MWMwZnx7InJlbW90ZV9hZGRyZXNzIjoiOTMuMTg4LjQxLjY2IiwicmVxdWVzdF9pZCI6IkY4MjI6NjNEODozNzcxQjY6M0E2RTNBOjYwQkE4MTM4IiwidGltZXN0YW1wIjoxNjIyODM1NTQ0LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
 
     <meta name="enabled-features" content="MARKETPLACE_PENDING_INSTALLATIONS,AUTOCOMPLETE_EMOJIS_IN_MARKDOWN_EDITOR,GITHUB_TOKEN_PERMISSION">
 
@@ -131,7 +131,7 @@
 
 
 
-    <link rel="canonical" href="https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/tcpclient.c" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/makefile" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -211,7 +211,7 @@
             spellcheck="false"
             autocomplete="off"
           >
-          <input type="hidden" value="UgSxgUBheWwXPa1ffPQjbv8qUzRg4VaoVTIOsHmi37A6JPPHCFP7KgVkZS7hwANgJliJ16fkGGCSDuVUGOKgQQ==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
+          <input type="hidden" value="5QnbVeFxsIh0SVrbvww55WUCTs0xNV8/wpvInYE3MVCNKZkTqUMyzmYQkqoiOBnrvHCULvYwEfcFpyN54HdOoQ==" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" />
           <input type="hidden" class="js-site-search-type-field" name="type" >
               <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
 
@@ -390,7 +390,7 @@
     <a class="js-selected-navigation-item Header-link d-block d-md-none py-2 py-md-3 border-top border-md-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:workspaces context:user" data-selected-links="/codespaces /codespaces" href="/codespaces">
       Codespaces
 </a>
-      <a class="js-selected-navigation-item Header-link d-block d-md-none py-2 py-md-3 border-top border-md-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:Sponsors" data-hydro-click="{&quot;event_type&quot;:&quot;sponsors.button_click&quot;,&quot;payload&quot;:{&quot;button&quot;:&quot;HEADER_SPONSORS_DASHBOARD&quot;,&quot;sponsorable_login&quot;:&quot;PoddubnaiaM&quot;,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/tcpclient.c&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="8a4094fc77c3bdb54955adea62043fe40f8db9b44e7e41776856ecacd11bab8a" data-selected-links=" /sponsors/accounts" href="/sponsors/accounts">Sponsors</a>
+      <a class="js-selected-navigation-item Header-link d-block d-md-none py-2 py-md-3 border-top border-md-top-0 border-white-fade-15" data-ga-click="Header, click, Nav menu - item:Sponsors" data-hydro-click="{&quot;event_type&quot;:&quot;sponsors.button_click&quot;,&quot;payload&quot;:{&quot;button&quot;:&quot;HEADER_SPONSORS_DASHBOARD&quot;,&quot;sponsorable_login&quot;:&quot;PoddubnaiaM&quot;,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/makefile&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="5d4a1cdd5d64d6fd067305eeacb9121aaad8ed9b8a6f2633e84f6d77a4ea2ba0" data-selected-links=" /sponsors/accounts" href="/sponsors/accounts">Sponsors</a>
 
     <a class="Header-link d-block d-md-none mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade-15" href="/settings/profile">
       Settings
@@ -399,7 +399,7 @@
       <img class="avatar avatar-user" src="https://avatars.githubusercontent.com/u/71491672?s=40&amp;v=4" width="20" height="20" alt="@PoddubnaiaM" />
       PoddubnaiaM
 </a>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="r8ac9JUQotANcVfQ80FBal7I9au8sPM5ymr1xqNzIq28tdc04qRA4LCNb5rVskXmXSPPpLJPkpbsdQ2bilcasQ==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/logout" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="hga6HS3RLdGG/7quijYYylGC9yElR5zeH/gdN/uQZOGVdfHdWmXP4TsDguSsxRxGUmnNLiu4/XE55+Vq0rRc/Q==" />
       <button type="submit" class="Header-link mr-0 mr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade-15 d-md-none btn-link d-block width-full text-left" data-ga-click="Header, sign out, icon:logout" style="padding-left: 2px;">
         <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z"></path></svg>
         Sign out
@@ -423,7 +423,7 @@
       <notification-indicator
         class="js-socket-channel"
         data-test-selector="notifications-indicator"
-        data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6NzE0OTE2NzIiLCJ0IjoxNjIyODM1NTU3fQ==--0b8b8d4d0e7838b47c44bc124370ba84555fc368dca5f540d18e0b4b520036be">
+        data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6NzE0OTE2NzIiLCJ0IjoxNjIyODM1NTQ0fQ==--16d3d1e461f0a0b56ef4fad5554e83706834d493cac24fb6eafbfcfd281721a9">
         <a href="/notifications"
           class="Header-link notification-indicator position-relative tooltipped tooltipped-sw"
           
@@ -595,7 +595,7 @@
         data-action="toggle:notifications-list-subscription-form#detailsToggled"
       >
 
-      <summary class="btn btn-sm rounded-right-0" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/tcpclient.c&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="33a6548cdbaa9e40846c8d3e1bf8dbb6410a2ecdd9c1cddfbace544b76c3ca25" data-ga-click="Repository, click Watch settings, action:blob#show" aria-label="Notifications settings">
+      <summary class="btn btn-sm rounded-right-0" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/makefile&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="8632fa848771cd6e25bdc5ffb1f942a9f462645b4e4953c503f41bbd58e3f973" data-ga-click="Repository, click Watch settings, action:blob#show" aria-label="Notifications settings">
           <span data-menu-button>
             <span
               hidden
@@ -647,7 +647,7 @@
             </header>
 
             <div class="SelectMenu-list">
-              <form data-target="notifications-list-subscription-form.form" data-action="submit:notifications-list-subscription-form#submitForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="GUUahcfkSpEe735a8AgbxseF1kEWTlPBhMVlFhWxfcOpC/xACN8/mDMADjA3ybhcqZsELQCAdmSK3f33kFk9Ow==" />
+              <form data-target="notifications-list-subscription-form.form" data-action="submit:notifications-list-subscription-form#submitForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ft9rnLNmU3W+Am+dfjd/Adg9EK4/wx3kI4NXBPmxWqzOkY1ZfF0mfJPtH/e59tybtiPCwikNOEEtm8/lfFkaVA==" />
 
                 <input type="hidden" name="repository_id" value="338772117">
 
@@ -759,7 +759,7 @@
 
         <details-dialog class="notifications-component-dialog " data-target="notifications-list-subscription-form.customDialog" hidden>
           <div class="SelectMenu-modal notifications-component-dialog-modal overflow-visible">
-            <form data-target="notifications-list-subscription-form.customform" data-action="submit:notifications-list-subscription-form#submitCustomForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="5s8wM3I7jBYkHeUsVbRXYnXaN8yTk3XNlB9mUWq20fRWgdb2vQD5HwnylUaSdfT4G8TloIVdUGiaB/6w716RDA==" />
+            <form data-target="notifications-list-subscription-form.customform" data-action="submit:notifications-list-subscription-form#submitCustomForm" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="lRrmxvgBWhcMrGWGO5/TXFO1wkn+Z4+8/qYtOk0PHdklVAADNzovHiFDFez8XnDGPasQJeipqhnwvrXbyOddIQ==" />
 
               <input type="hidden" name="repository_id" value="338772117">
 
@@ -925,9 +925,9 @@
 
   <li>
         <div class="d-block js-toggler-container js-social-container starring-container ">
-    <form class="starred js-social-form" action="/ShuvalovaVika/os_lab_2019/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="bYPotYIbHmEfDWj0tMORSDur9UI7nTYnO0F/wnnrvwM37sSsEY9gtnXlCxrkb69yZRjtzWSAZhUuNBwTrgPn6A==" />
+    <form class="starred js-social-form" action="/ShuvalovaVika/os_lab_2019/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="0FOJchAuBJE4suCPce+AbuVhi4Z6c7jSteyYbK+dfCSKPqVrg7p6RlJag2EhQ75Uu9KTCSVu6OCgmfu9eHUkzw==" />
       <input type="hidden" name="context" value="repository">
-      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Unstar ShuvalovaVika/os_lab_2019" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/tcpclient.c&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="b3a84644095b4e1ae8c3d4a367e7c66a3caba308fafcb45f9764cc1b7f941aec" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-star-fill mr-1">
+      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Unstar ShuvalovaVika/os_lab_2019" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/makefile&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="0ee6f7720fb52a966c9e2d756f8f6cabc396a695df883f6b9c04cafe6cf61eac" data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-star-fill mr-1">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
 </svg>
         <span data-view-component="true">
@@ -937,9 +937,9 @@
            0
         </a>
 </form>
-    <form class="unstarred js-social-form" action="/ShuvalovaVika/os_lab_2019/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="/26E1HljBw/d6Ul2vsWOFnvOEIrC8Qq8Q7PQmgnXr84+C2+vwE97KBhqkhjwc/EPuZkynBheXdg3a2mxRBMZkA==" />
+    <form class="unstarred js-social-form" action="/ShuvalovaVika/os_lab_2019/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="KNUjeB1qTUbbj/UCjGqbu1GpMIwjnKcgmyxAq7D+LhDpsMgDpEYxYR4MLmzC3OSik/4Smvkz8ETv9PmA/TqYTg==" />
       <input type="hidden" name="context" value="repository">
-      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Star ShuvalovaVika/os_lab_2019" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/tcpclient.c&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="62fe00759720d11b553cccbaa63d9ba834d525c4f2ee9fc7c1ad3363fd92f094" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-star mr-1">
+      <button type="submit" class="btn btn-sm btn-with-count  js-toggler-target" aria-label="Unstar this repository" title="Star ShuvalovaVika/os_lab_2019" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/makefile&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="d182f49a80a2f728700d8e0a5c8b4987f57ad95ab9b84c3942bf02ecc64eb459" data-ga-click="Repository, click star button, action:blob#show; text:Star">        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-star mr-1">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path>
 </svg>
         <span data-view-component="true">
@@ -953,8 +953,8 @@
   </li>
 
   <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/ShuvalovaVika/os_lab_2019/fork" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="30IQj5m4dFs00/YZJ8iQfu4hWcrZMrSfrYuB0RAZTUn/+4kCxVmyG5/In0YpZ+UIhYYviA1Vr0OitugiKN4sjA==" />
-              <button class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/tcpclient.c&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="52edebc0d596f1fee18b97c013b2fc2cd56f566bc4d310f23dfd26721600a8c6" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" type="submit" title="Fork your own copy of ShuvalovaVika/os_lab_2019 to your account" aria-label="Fork your own copy of ShuvalovaVika/os_lab_2019 to your account">                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-repo-forked">
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/ShuvalovaVika/os_lab_2019/fork" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="J2YiEo4LrAA8iKX4GaL6KNh1Z5K0AZZPkowwzqQ95qIH37uf0upqQJeTzKcXDY9es9IR0GBmjZOdsVk9nPqHZw==" />
+              <button class="btn btn-sm btn-with-count" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/makefile&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="4624c5ec9d1ab1b77b1cc79b9a15dd3a83a35733d158fe9f25b4a4f70f2a914a" data-ga-click="Repository, show fork modal, action:blob#show; text:Fork" type="submit" title="Fork your own copy of ShuvalovaVika/os_lab_2019 to your account" aria-label="Fork your own copy of ShuvalovaVika/os_lab_2019 to your account">                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-repo-forked">
     <path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
 </svg>
                 Fork
@@ -1094,9 +1094,9 @@
   
 
 
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/ShuvalovaVika/os_lab_2019/blob/ed51d5fc2fdd469b2a4db10335847b65129c1293/lab7/src/tcpclient.c">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/ShuvalovaVika/os_lab_2019/blob/ed51d5fc2fdd469b2a4db10335847b65129c1293/lab7/src/makefile">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v22:1a9917f224ca7faf2e076aade204a5db004f07831788615bcab38e3fbed92b6c -->
+    <!-- blob contrib key: blob_contributors:v22:481cbd3746906a5a89fa63cc0ed98581a2e69f8db3c1fee522c55b187964dcf8 -->
 
     <div class="d-flex flex-items-start flex-shrink-0 pb-3 flex-wrap flex-md-nowrap flex-justify-between flex-md-justify-start">
       
@@ -1180,7 +1180,7 @@
             </div>
 
               <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/ShuvalovaVika/os_lab_2019/blob/{{ urlEncodedRefName }}/lab7/src/tcpclient.c" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
+  <a href="https://github.com/ShuvalovaVika/os_lab_2019/blob/{{ urlEncodedRefName }}/lab7/src/makefile" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
     <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
@@ -1220,7 +1220,7 @@
             </template>
 
               <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/ShuvalovaVika/os_lab_2019/blob/{{ urlEncodedRefName }}/lab7/src/tcpclient.c" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
+  <a href="https://github.com/ShuvalovaVika/os_lab_2019/blob/{{ urlEncodedRefName }}/lab7/src/makefile" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}">
     <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
@@ -1251,7 +1251,7 @@
 </div>
 
       <h2 id="blob-path" class="breadcrumb flex-auto flex-self-center min-width-0 text-normal mx-2 width-full width-md-auto flex-order-1 flex-md-order-none mt-3 mt-md-0">
-        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/ShuvalovaVika/os_lab_2019"><span>os_lab_2019</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/ShuvalovaVika/os_lab_2019/tree/master/lab7"><span>lab7</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/ShuvalovaVika/os_lab_2019/tree/master/lab7/src"><span>src</span></a></span><span class="separator">/</span><strong class="final-path">tcpclient.c</strong>
+        <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/ShuvalovaVika/os_lab_2019"><span>os_lab_2019</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/ShuvalovaVika/os_lab_2019/tree/master/lab7"><span>lab7</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-pjax="true" href="/ShuvalovaVika/os_lab_2019/tree/master/lab7/src"><span>src</span></a></span><span class="separator">/</span><strong class="final-path">makefile</strong>
       </h2>
       <a href="/ShuvalovaVika/os_lab_2019/find/master"
             class="js-pjax-capture-input btn mr-2 d-none d-md-block"
@@ -1272,7 +1272,7 @@
 </summary>
   <div data-view-component="true">          <ul class="dropdown-menu dropdown-menu-sw">
             <li class="d-block d-md-none">
-              <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/tcpclient.c&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="a93b5493d35a462ab0701eba35a85ab786bd195fcf070dc22a13ca3d855122ec" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" data-pjax="true" href="/ShuvalovaVika/os_lab_2019/find/master">
+              <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:338772117,&quot;originating_url&quot;:&quot;https://github.com/ShuvalovaVika/os_lab_2019/blob/master/lab7/src/makefile&quot;,&quot;user_id&quot;:71491672}}" data-hydro-click-hmac="d39c18695d83c59909b7866a4b4d893b36615db9aa27eace4e5fd6e52abeca05" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" data-pjax="true" href="/ShuvalovaVika/os_lab_2019/find/master">
                 <span class="flex-auto">Go to file</span>
                 <span class="text-small color-text-secondary" aria-hidden="true">T</span>
 </a>            </li>
@@ -1286,12 +1286,12 @@
             </li>
             <li class="dropdown-divider" role="none"></li>
             <li>
-              <clipboard-copy value="lab7/src/tcpclient.c" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details">
+              <clipboard-copy value="lab7/src/makefile" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details">
                 Copy path
               </clipboard-copy>
             </li>
             <li>
-              <clipboard-copy value="https://github.com/ShuvalovaVika/os_lab_2019/blob/ed51d5fc2fdd469b2a4db10335847b65129c1293/lab7/src/tcpclient.c" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details" >
+              <clipboard-copy value="https://github.com/ShuvalovaVika/os_lab_2019/blob/ed51d5fc2fdd469b2a4db10335847b65129c1293/lab7/src/makefile" class="dropdown-item cursor-pointer" data-toggle-for="blob-more-options-details" >
                 <span class="d-flex flex-items-baseline">
                   <span class="flex-auto">Copy permalink</span>
                 </span>
@@ -1304,88 +1304,17 @@
 
 
     <div class="Box d-flex flex-column flex-shrink-0 mb-3">
-      
-  <div class="Box-header Box-header--blue Details js-details-container">
-      <div class="d-flex flex-items-center">
-        <span class="flex-shrink-0 ml-n1 mr-n1 mt-n1 mb-n1">
-          <a rel="author" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/users/ShuvalovaVika/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/ShuvalovaVika"><img class="avatar avatar-user" src="https://avatars.githubusercontent.com/u/71592642?s=48&amp;v=4" width="24" height="24" alt="@ShuvalovaVika" /></a>
-        </span>
-        <div class="flex-1 d-flex flex-items-center ml-3 min-width-0">
-          <div class="css-truncate css-truncate-overflow">
-            <a class="text-bold Link--primary" rel="author" data-hovercard-type="user" data-hovercard-url="/users/ShuvalovaVika/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/ShuvalovaVika">ShuvalovaVika</a>
-
-                <span class="markdown-title">
-                  <a data-pjax="true" title="lab6 and lab7 done" class="Link--secondary" href="/ShuvalovaVika/os_lab_2019/commit/ed51d5fc2fdd469b2a4db10335847b65129c1293">lab6 and lab7 done</a>
-                </span>
-          </div>
-
-
-          <span class="ml-2">
-            <include-fragment accept="text/fragment+html" src="/ShuvalovaVika/os_lab_2019/commit/ed51d5fc2fdd469b2a4db10335847b65129c1293/rollup?direction=e" class="d-inline"></include-fragment>
-          </span>
+      <include-fragment src="/ShuvalovaVika/os_lab_2019/contributors/master/lab7/src/makefile" class="commit-loader">
+        <div class="Box-header Box-header--blue d-flex flex-items-center">
+          <div class="Skeleton avatar avatar-user flex-shrink-0 ml-n1 mr-n1 mt-n1 mb-n1" style="width:24px;height:24px;"></div>
+          <div class="Skeleton Skeleton--text col-5 ml-2">&nbsp;</div>
         </div>
-        <div class="ml-3 d-flex flex-shrink-0 flex-items-center flex-justify-end color-text-secondary no-wrap">
-          <span class="d-none d-md-inline">
-            <span>Latest commit</span>
-            <a class="text-small text-mono Link--secondary" href="/ShuvalovaVika/os_lab_2019/commit/ed51d5fc2fdd469b2a4db10335847b65129c1293" data-pjax>ed51d5f</a>
-            <span itemprop="dateModified"><relative-time datetime="2021-03-28T11:53:11Z" class="no-wrap">Mar 28, 2021</relative-time></span>
-          </span>
 
-          <a data-pjax href="/ShuvalovaVika/os_lab_2019/commits/master/lab7/src/tcpclient.c" class="ml-3 no-wrap Link--primary no-underline">
-            <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-history text-gray">
-    <path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"></path>
-</svg>
-            <span class="d-none d-sm-inline">
-              <strong>History</strong>
-            </span>
-          </a>
+        <div class="Box-body d-flex flex-items-center" >
+          <div class="Skeleton Skeleton--text col-1">&nbsp;</div>
+          <span class="color-text-danger h6 loader-error">Cannot retrieve contributors at this time</span>
         </div>
-      </div>
-
-  </div>
-
-  <div class="Box-body d-flex flex-items-center flex-auto border-bottom-0 flex-wrap" >
-    <details class="details-reset details-overlay details-overlay-dark lh-default color-text-primary float-left mr-3" id="blob_contributors_box">
-      <summary class="Link--primary">
-        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-people text-gray">
-    <path fill-rule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z"></path>
-</svg>
-        <strong>2</strong>
-        
-        contributors
-      </summary>
-      <details-dialog
-        class="Box Box--overlay d-flex flex-column anim-fade-in fast"
-        aria-label="Users who have contributed to this file"
-        src="/ShuvalovaVika/os_lab_2019/contributors-list/master/lab7/src/tcpclient.c" preload>
-        <div class="Box-header">
-          <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
-            <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-x">
-    <path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
-</svg>
-          </button>
-          <h3 class="Box-title">
-            Users who have contributed to this file
-          </h3>
-        </div>
-        <include-fragment>
-          <svg style="box-sizing: content-box; color: var(--color-icon-primary);" viewBox="0 0 16 16" fill="none" data-view-component="true" width="32" height="32" class="my-3 mx-auto d-block anim-rotate">
-  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2" vector-effect="non-scaling-stroke" />
-  <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-</svg>
-        </include-fragment>
-      </details-dialog>
-    </details>
-      <span class="">
-    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/users/loshca/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/ShuvalovaVika/os_lab_2019/commits/master/lab7/src/tcpclient.c?author=loshca">
-      <img class="avatar mr-2 avatar-user" src="https://avatars.githubusercontent.com/u/3337967?s=48&amp;v=4" width="24" height="24" alt="@loshca" /> 
-</a>    <a class="avatar-link" data-hovercard-type="user" data-hovercard-url="/users/ShuvalovaVika/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/ShuvalovaVika/os_lab_2019/commits/master/lab7/src/tcpclient.c?author=ShuvalovaVika">
-      <img class="avatar mr-2 avatar-user" src="https://avatars.githubusercontent.com/u/71592642?s=48&amp;v=4" width="24" height="24" alt="@ShuvalovaVika" /> 
-</a>
-</span>
-
-  </div>
-    </div>
+</include-fragment>    </div>
 
 
 
@@ -1410,23 +1339,21 @@
 
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1">
 
-      <span class="file-mode" title="File mode">executable file</span>
+      27 lines (17 sloc)
       <span class="file-info-divider"></span>
-      57 lines (45 sloc)
-      <span class="file-info-divider"></span>
-    1.09 KB
+    453 Bytes
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between hide-sm hide-md">
 
     <div class="BtnGroup">
-      <a href="/ShuvalovaVika/os_lab_2019/raw/master/lab7/src/tcpclient.c" id="raw-url" role="button" data-view-component="true" class="btn-sm btn BtnGroup-item">
+      <a href="/ShuvalovaVika/os_lab_2019/raw/master/lab7/src/makefile" id="raw-url" role="button" data-view-component="true" class="btn-sm btn BtnGroup-item">
   
   Raw
   
 
 </a>
-        <a href="/ShuvalovaVika/os_lab_2019/blame/master/lab7/src/tcpclient.c" data-hotkey="b" role="button" data-view-component="true" class="js-update-url-with-hash btn-sm btn BtnGroup-item">
+        <a href="/ShuvalovaVika/os_lab_2019/blame/master/lab7/src/makefile" data-hotkey="b" role="button" data-view-component="true" class="js-update-url-with-hash btn-sm btn BtnGroup-item">
   
   Blame
   
@@ -1445,7 +1372,7 @@
 </svg>
           </a>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/ShuvalovaVika/os_lab_2019/edit/master/lab7/src/tcpclient.c" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="qs86d34ePIYT2qC6D+ow5M/qspLY/I6x0dYY2kqPiUQglI6T6b+3MUKFBEG9H5C/jq3jLfSS5nCMyoNDTrdpdg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/ShuvalovaVika/os_lab_2019/edit/master/lab7/src/makefile" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="48dQYce+bSvUm/DxWgKf6o40qrJcc1OXoxPHNDb8Hyqc3BafkRdK+58tjp2nSxSrAP8Fp0AdoJ+kq4tcZW1fPw==" />
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
               aria-label="Edit the file in your fork of this project" data-hotkey="e" data-disable-with>
               <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-pencil">
@@ -1453,7 +1380,7 @@
 </svg>
             </button>
 </form>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/ShuvalovaVika/os_lab_2019/delete/master/lab7/src/tcpclient.c" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="LroQ1XJInzPz+u8Ap3eb5HVVM1HH7GaYZ+cypPs+F4xoyV2dPZ8f2urfbQ0/KAWI0MwRAMujJ03wk6EzFLHYtw==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/ShuvalovaVika/os_lab_2019/delete/master/lab7/src/makefile" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="0tYK5qVmhkeXo07ItXpTb0vzKJPBiU2qx0oQ/q5NBjP+N9D2q0LjxkxHpwGHQhO/+k19+uk+ZG2BmzNiiOlTIw==" />
             <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
               aria-label="Delete the file in your fork of this project" data-disable-with>
               <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-trash">
@@ -1481,22 +1408,22 @@
                 </a>
             </li>
           <li>
-            <a class="dropdown-item" href="/ShuvalovaVika/os_lab_2019/raw/master/lab7/src/tcpclient.c">
+            <a class="dropdown-item" href="/ShuvalovaVika/os_lab_2019/raw/master/lab7/src/makefile">
               View raw
             </a>
           </li>
             <li>
-              <a class="dropdown-item" href="/ShuvalovaVika/os_lab_2019/blame/master/lab7/src/tcpclient.c">
+              <a class="dropdown-item" href="/ShuvalovaVika/os_lab_2019/blame/master/lab7/src/makefile">
                 View blame
               </a>
             </li>
 
               <li class="dropdown-divider" role="none"></li>
               <li>
-                <a class="dropdown-item" href="/ShuvalovaVika/os_lab_2019/edit/master/lab7/src/tcpclient.c">Edit file</a>
+                <a class="dropdown-item" href="/ShuvalovaVika/os_lab_2019/edit/master/lab7/src/makefile">Edit file</a>
               </li>
               <li>
-                <a class="dropdown-item menu-item-danger" href="/ShuvalovaVika/os_lab_2019/delete/master/lab7/src/tcpclient.c">Delete file</a>
+                <a class="dropdown-item menu-item-danger" href="/ShuvalovaVika/os_lab_2019/delete/master/lab7/src/makefile">Delete file</a>
               </li>
         </ul>
       </details>
@@ -1505,98 +1432,104 @@
 
 
       
-  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-c  gist-border-0">
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-makefile  gist-border-0">
       
 <table class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip>
       <tr>
         <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="LC1" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>arpa/inet.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">CC</span>=gcc -std=c99</td>
       </tr>
       <tr>
         <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="LC2" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>netinet/in.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>stdio.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-en">all</span>: tcpclient tcpserver udpclient udpserver</td>
       </tr>
       <tr>
         <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>stdlib.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>string.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-en">tcp</span>: tcpclient tcpserver</td>
       </tr>
       <tr>
         <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>sys/socket.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>sys/types.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-en">udp</span>: udpclient udpserver</td>
       </tr>
       <tr>
         <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>unistd.h<span class="pl-pds">&gt;</span></span></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-en">tcpclient</span>: tcpclient.c</td>
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">define</span> <span class="pl-en">SADDR</span> <span class="pl-k">struct</span> sockaddr</td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line">	<span class="pl-s">$(<span class="pl-smi">CC</span>)</span> tcpclient.c -o tcpclient.exe</td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line">#<span class="pl-k">define</span> <span class="pl-en">SIZE</span> <span class="pl-k">sizeof</span>(<span class="pl-k">struct</span> sockaddr_in)</td>
-      </tr>
-      <tr>
-        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code blob-code-inner js-file-line">
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">
 </td>
       </tr>
       <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-en">tcpserver</span>: tcpserver.c</td>
+      </tr>
+      <tr>
         <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
-        <td id="LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-k">int</span> <span class="pl-en">main</span>(<span class="pl-k">int</span> argc, <span class="pl-k">char</span> *argv[]) {</td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">	<span class="pl-s">$(<span class="pl-smi">CC</span>)</span> tcpserver.c -o tcpserver.exe</td>
       </tr>
       <tr>
         <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">int</span> fd;</td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">int</span> nread;</td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-en">udpclient</span>: udpclient.c</td>
       </tr>
       <tr>
         <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code blob-code-inner js-file-line">  </td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">	<span class="pl-s">$(<span class="pl-smi">CC</span>)</span> udpclient.c -o udpclient.exe</td>
       </tr>
       <tr>
         <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
-        <td id="LC17" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">struct</span> sockaddr_in servaddr;</td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code blob-code-inner js-file-line">  </td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-en">udpserver</span>: udpserver.c</td>
       </tr>
       <tr>
         <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
-        <td id="LC19" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">if</span> (argc != <span class="pl-c1">4</span>) {</td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">	<span class="pl-s">$(<span class="pl-smi">CC</span>)</span> udpserver.c -o udpserver.exe</td>
       </tr>
       <tr>
         <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">printf</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>usage: client &lt;IPaddress of server&gt; &lt;port&gt; &lt;bufsize&gt;<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>);</td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">exit</span>(<span class="pl-c1">1</span>);</td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-en">cltcp</span>:</td>
       </tr>
       <tr>
         <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code blob-code-inner js-file-line">  }</td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">	rm tcpserver.exe tcpclient.exe</td>
       </tr>
       <tr>
         <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
@@ -1605,11 +1538,11 @@
       </tr>
       <tr>
         <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">int</span> BUFSIZE = <span class="pl-c1">atoi</span>(argv[<span class="pl-c1">3</span>]);</td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-en">cludp</span>:</td>
       </tr>
       <tr>
         <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
-        <td id="LC25" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">char</span> buf[<span class="pl-c1">atoi</span>(argv[<span class="pl-c1">3</span>])];</td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">	rm udpclient.exe udpserver.exe</td>
       </tr>
       <tr>
         <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
@@ -1618,133 +1551,7 @@
       </tr>
       <tr>
         <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">if</span> ((fd = <span class="pl-c1">socket</span>(AF_INET, SOCK_STREAM, <span class="pl-c1">0</span>)) &lt; <span class="pl-c1">0</span>) {</td>
-      </tr>
-      <tr>
-        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">perror</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>socket creating<span class="pl-pds">&quot;</span></span>);</td>
-      </tr>
-      <tr>
-        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
-        <td id="LC29" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">exit</span>(<span class="pl-c1">1</span>);</td>
-      </tr>
-      <tr>
-        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
-        <td id="LC30" class="blob-code blob-code-inner js-file-line">  }</td>
-      </tr>
-      <tr>
-        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
-        <td id="LC31" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
-        <td id="LC32" class="blob-code blob-code-inner js-file-line">  <span class="pl-c1">memset</span>(&amp;servaddr, <span class="pl-c1">0</span>, SIZE);</td>
-      </tr>
-      <tr>
-        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
-        <td id="LC33" class="blob-code blob-code-inner js-file-line">  servaddr.<span class="pl-smi">sin_family</span> = AF_INET;</td>
-      </tr>
-      <tr>
-        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
-        <td id="LC34" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
-        <td id="LC35" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">if</span> (<span class="pl-c1">inet_pton</span>(AF_INET, argv[<span class="pl-c1">1</span>], &amp;servaddr.<span class="pl-smi">sin_addr</span>) &lt;= <span class="pl-c1">0</span>) {</td>
-      </tr>
-      <tr>
-        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
-        <td id="LC36" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">perror</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>bad address<span class="pl-pds">&quot;</span></span>);</td>
-      </tr>
-      <tr>
-        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
-        <td id="LC37" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">exit</span>(<span class="pl-c1">1</span>);</td>
-      </tr>
-      <tr>
-        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
-        <td id="LC38" class="blob-code blob-code-inner js-file-line">  }</td>
-      </tr>
-      <tr>
-        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
-        <td id="LC39" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
-        <td id="LC40" class="blob-code blob-code-inner js-file-line">  servaddr.<span class="pl-smi">sin_port</span> = <span class="pl-c1">htons</span>(<span class="pl-c1">atoi</span>(argv[<span class="pl-c1">2</span>]));</td>
-      </tr>
-      <tr>
-        <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
-        <td id="LC41" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
-        <td id="LC42" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">if</span> (<span class="pl-c1">connect</span>(fd, (SADDR *)&amp;servaddr, SIZE) &lt; <span class="pl-c1">0</span>) {</td>
-      </tr>
-      <tr>
-        <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
-        <td id="LC43" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">perror</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>connect<span class="pl-pds">&quot;</span></span>);</td>
-      </tr>
-      <tr>
-        <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
-        <td id="LC44" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">exit</span>(<span class="pl-c1">1</span>);</td>
-      </tr>
-      <tr>
-        <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
-        <td id="LC45" class="blob-code blob-code-inner js-file-line">  }</td>
-      </tr>
-      <tr>
-        <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
-        <td id="LC46" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
-        <td id="LC47" class="blob-code blob-code-inner js-file-line">  <span class="pl-c1">write</span>(<span class="pl-c1">1</span>, <span class="pl-s"><span class="pl-pds">&quot;</span>Input message to send<span class="pl-cce">\n</span><span class="pl-pds">&quot;</span></span>, <span class="pl-c1">22</span>);</td>
-      </tr>
-      <tr>
-        <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
-        <td id="LC48" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">while</span> ((nread = <span class="pl-c1">read</span>(<span class="pl-c1">0</span>, buf, BUFSIZE)) &gt; <span class="pl-c1">0</span>) {</td>
-      </tr>
-      <tr>
-        <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
-        <td id="LC49" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> (<span class="pl-c1">write</span>(fd, buf, nread) &lt; <span class="pl-c1">0</span>) {</td>
-      </tr>
-      <tr>
-        <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
-        <td id="LC50" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1">perror</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>write<span class="pl-pds">&quot;</span></span>);</td>
-      </tr>
-      <tr>
-        <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
-        <td id="LC51" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1">exit</span>(<span class="pl-c1">1</span>);</td>
-      </tr>
-      <tr>
-        <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
-        <td id="LC52" class="blob-code blob-code-inner js-file-line">    }</td>
-      </tr>
-      <tr>
-        <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
-        <td id="LC53" class="blob-code blob-code-inner js-file-line">  }</td>
-      </tr>
-      <tr>
-        <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
-        <td id="LC54" class="blob-code blob-code-inner js-file-line">
-</td>
-      </tr>
-      <tr>
-        <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
-        <td id="LC55" class="blob-code blob-code-inner js-file-line">  <span class="pl-c1">close</span>(fd);</td>
-      </tr>
-      <tr>
-        <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
-        <td id="LC56" class="blob-code blob-code-inner js-file-line">  <span class="pl-c1">exit</span>(<span class="pl-c1">0</span>);</td>
-      </tr>
-      <tr>
-        <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
-        <td id="LC57" class="blob-code blob-code-inner js-file-line">}</td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-en">clear</span>: cltcp cludp</td>
       </tr>
 </table>
 
@@ -1766,7 +1573,7 @@
             Copy permalink
           </clipboard-copy>
         </li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/ShuvalovaVika/os_lab_2019/blame/ed51d5fc2fdd469b2a4db10335847b65129c1293/lab7/src/tcpclient.c">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/ShuvalovaVika/os_lab_2019/blame/ed51d5fc2fdd469b2a4db10335847b65129c1293/lab7/src/makefile">View git blame</a></li>
       </ul>
     </details-menu>
   </details>
